@@ -321,4 +321,8 @@ func setDefaultConfig() {
 	viper.SetDefault("notification.push.max_retries", 3)
 	viper.SetDefault("notification.push.retry_delay", "5s")
 	viper.SetDefault("notification.push.providers", []map[string]any{})
+
+	// Notification templates
+	viper.SetDefault("notification.templates.newspecies.title", "New Species: {{.CommonName}}")
+	viper.SetDefault("notification.templates.newspecies.message", "First detection of {{.CommonName}} ({{.ScientificName}}) with {{.ConfidencePercent}}% confidence at {{.DetectionTime}}. View: {{.DetectionURL}}")
 }

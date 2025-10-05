@@ -284,3 +284,8 @@ notification:
             # Other metadata fields use exact string matching:
             #   species: "Northern Cardinal"
             #   location: "backyard"
+
+  templates:
+    newspecies:
+      title: "New Species: {{.CommonName}}"
+      message: "First detection of {{.CommonName}} ({{.ScientificName}}) with {{.ConfidencePercent}}% confidence at {{.DetectionTime}}. View: {{.DetectionURL}}"
